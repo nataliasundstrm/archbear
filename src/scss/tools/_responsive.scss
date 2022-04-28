@@ -1,0 +1,15 @@
+// Responsive - Max Width 
+@mixin max($breakpoint: 56.25rem) {
+    @media screen and (max-width: $breakpoint){
+        @content;
+    }
+    
+}
+ 
+// Responsive - Min Width
+@mixin min($breakpoint: 87.5rem) {
+    @media screen and (min-width: $breakpoint){
+        @content;
+    }
+    
+}

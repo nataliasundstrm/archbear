@@ -1,0 +1,28 @@
+@mixin standard(
+    $background: var(--color-dark), 
+    $color: var(--color-light), 
+    $padding: 0.5rem 1rem, 
+    $border-radius: 25px, 
+    $font-size: var(--font-size-1),
+    $hover-background: var(--color-accent), 
+    $hover-color: var(--color-dark)
+    ){
+        
+    background-color: $background;
+    color: $color;
+    display: inline-block;
+    text-decoration: none;
+    padding: $padding;
+    border-radius: $border-radius;  
+    font-size: $font-size;
+    font-family: var(--font-sans);
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-background;
+        color: $hover-color;
+    }
+}
+
+

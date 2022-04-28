@@ -1,0 +1,81 @@
+:root {
+  --font-sans: sans-serif;
+  --font-serif: serif;
+  --font-base: 1rem;
+  --font-scale: 1.25;
+  --font-size-1: var(--font-base);
+  --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+  --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
+  --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
+  --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
+  --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+  --color-accent: #DBDBD7;
+  --color-light: #ededed;
+  --color-dark: #373737;
+  --section-gap: 8rem;
+  --section-gap-inner: calc( var(--section-gap) * 0.75 );
+  --section-gap-inner-small: calc( var(--section-gap) * 0.5);
+  --grid-gap: 3rem;
+  --page-padding: 30px;
+  --page-width: 78rem;
+  --content-width: 50rem;
+  --content-width-small: 40rem;
+  --menu-height: 100px;
+  --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
+  --grid--content: repeat(12, 1fr);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
+}
+
+p, a, li, span {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-size: var(--font-size-1);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

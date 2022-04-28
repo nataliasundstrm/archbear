@@ -1,0 +1,25 @@
+@mixin input (
+    $background-color: var(--color-dark),
+    $color: var(--color-light),
+    $border-radius: 0
+) {
+    background-color: $background-color;
+    font-size: var(--font-size-1);
+    color: $color;
+    padding: 0.5rem 1rem;  
+    font-family: var(--font-sans);
+    border-radius: $border-radius;
+    border: 0;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        -moz-apperance: textfield;
+    }
+
+    
+}
