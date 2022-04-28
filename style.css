@@ -9,20 +9,20 @@
   --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
   --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
   --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
-  --color-accent: #DBDBD7;
-  --color-light: #ededed;
-  --color-dark: #373737;
+  --color-light: #fff;
+  --color-medium: #707070;
+  --color-dark: #313131;
   --section-gap: 8rem;
   --section-gap-inner: calc( var(--section-gap) * 0.75 );
   --section-gap-inner-small: calc( var(--section-gap) * 0.5);
   --grid-gap: 3rem;
   --page-padding: 30px;
-  --page-width: 78rem;
+  --page-width: 100%;
   --content-width: 50rem;
   --content-width-small: 40rem;
-  --menu-height: 100px;
+  --menu-height: 90px;
   --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
-  --grid--content: repeat(12, 1fr);
+  --grid-content: repeat(12, 1fr);
 }
 
 * {
@@ -76,6 +76,78 @@ p, a, li, span {
 
 a {
   text-decoration: none;
+}
+
+.site-header {
+  background-color: darkcyan;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--menu-height);
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.site-header__inner {
+  grid-column: inner;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.languages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-button {
+  display: block;
+  width: 36px;
+  height: 20px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+}
+.menu-button__hamburger {
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-dark);
+  position: relative;
+}
+.menu-button__hamburger::before, .menu-button__hamburger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  height: 2px;
+  background-color: inherit;
+  top: -8px;
+}
+.menu-button__hamburger::after {
+  top: 8px;
+  width: 66%;
+}
+
+.hero {
+  background-color: #333;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.hero__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: var(--grid-content);
+  gap: var(--grid-gap);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,9 +16,10 @@
     --font-size-6: calc( var(--font-size-5) * var(--font-scale) ); 
 
     // Colors
-    --color-accent: #DBDBD7;
-    --color-light: #ededed;
-    --color-dark: #373737; 
+    // --color-accent: #DBDBD7;
+    --color-light: #fff;
+    --color-medium: #707070;
+    --color-dark: #313131; 
 
     // Section gaps
     --section-gap: 8rem;
@@ -30,17 +31,17 @@
 
     // Page settings 
     --page-padding: 30px;
-    --page-width: 78rem;
+    --page-width: 100%;
 
     // Content settings
     --content-width: 50rem; 
     --content-width-small: 40rem;
 
     // Menu settings
-    --menu-height: 100px;
+    --menu-height: 90px;
 
    // Grids 
     --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
-    --grid--content: repeat(12, 1fr); 
+    --grid-content: repeat(12, 1fr); 
 
 }

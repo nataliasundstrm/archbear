@@ -1,0 +1,34 @@
+.site-header {
+    background-color: darkcyan; // TEMP
+    // Headern placeras ovanpå hero sektionen, med position, top, left och width
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--menu-height);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.languages {
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+}

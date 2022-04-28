@@ -1,0 +1,13 @@
+.hero {
+    background-color: #333; // TEMP
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: var(--grid-content);
+        gap: var(--grid-gap);
+    }
+}
