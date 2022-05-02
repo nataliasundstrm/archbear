@@ -3,6 +3,7 @@
   --font-serif: serif;
   --font-base: 1rem;
   --font-scale: 1.25;
+  --font-size-small: calc( var(--font-size-1) / var(--font-scale));
   --font-size-1: var(--font-base);
   --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
   --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
@@ -212,6 +213,10 @@ strong {
 }
 .hero__title {
   font-weight: 200;
+  font-size: clamp(2rem, -0.5455rem + 10.1818vw, 5.5rem);
+  max-width: var(--content-width);
+  line-height: 1.1;
+  margin: 0;
 }
 .hero__ingress {
   max-width: var(--content-width-small);
@@ -222,10 +227,36 @@ strong {
   background-color: var(--color-dark);
   left: 0;
   bottom: 0;
-  max-width: 530px;
-  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider__arrow {
+  width: 100px;
   height: 100px;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider__meta {
+  display: flex;
+  color: var(--color-light);
+  font-weight: 200;
+}
+.slider__counter {
+  display: flex;
+  align-items: center;
+}
+.slider__counter strong::after {
+  content: "/";
+  margin: 0 0.25rem;
+}
+.slider__counter::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-light);
+  margin: 0 1rem;
 }
 .slider__description {
   position: absolute;
@@ -234,8 +265,27 @@ strong {
   bottom: 0;
   max-width: 580px;
   width: 100%;
-  min-height: 250px;
+  padding: 4rem 9rem 4rem 5rem;
   z-index: 1001;
+}
+.slider__title {
+  font-size: var(--font-size-2);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.slider__title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-dark);
+  display: block;
+  margin: 1rem 0;
+}
+.slider__text {
+  margin: 0;
+  font-size: var(--font-size-small);
+  font-weight: 200;
+  line-height: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
