@@ -1,3 +1,9 @@
+body {
+    font-family: var(--font-sans);
+    color: var(--color-dark);
+
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
 }
@@ -27,7 +33,6 @@ h6 {
 }
 
 p, a, li, span {
-    font-family: var(--font-sans);
     line-height: 1.5;
     font-size: var(--font-size-1);
 }
