@@ -1,13 +1,87 @@
 .hero {
     background-color: #333; // TEMP
+    background-image: url(assets/images/hero@2x.jpg);
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
     display: grid;
     grid-template-columns: var(--grid-container);
+    position: relative;
+
+    // Overlay
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: var(--color-dark);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.4;
+    }
+
+    // Sidlist
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--color-light);
+        right: 0;
+        width: 100px;
+
+        // top och bottom ger en automatisk höjd
+        top: 0;
+        bottom: 0;
+    }
 
     &__inner {
         grid-column: inner;
         display: grid;
         grid-template-columns: var(--grid-content);
         gap: var(--grid-gap);
+        align-items: center;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 999;
+        grid-column: wide;
+        max-width: var(--content-width);
+        width: 100%;
+        color: var(--color-light);
+    }
+
+    &__title {
+        font-weight: 200;
+    }
+
+    &__ingress {
+        max-width: var(--content-width-small);
+    }
+}
+
+.slider {
+
+    &__pagination {
+        position: absolute;
+        background-color: var(--color-dark);
+        left: 0;
+        bottom: 0;
+        max-width: 530px;
+        width: 100%;
+        height: 100px; //temp
+        z-index: 1000;
+    }
+
+    &__description {
+        position: absolute;
+        background-color: var(--color-light);
+        right: 0;
+        bottom: 0;
+        max-width: 580px;
+        width: 100%;
+        min-height: 250px;
+        z-index: 1001;
+
     }
 }

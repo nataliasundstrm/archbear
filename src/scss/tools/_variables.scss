@@ -35,13 +35,13 @@
 
     // Content settings
     --content-width: 50rem; 
-    --content-width-small: 40rem;
+    --content-width-small: 33rem;
 
     // Menu settings
     --menu-height: 90px;
 
    // Grids 
     --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
-    --grid-content: repeat(12, 1fr); 
+    --grid-content: 1fr [wide-start] 1fr [content-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [content-end] 1fr [wide-end] 1fr; 
 
 }

@@ -19,10 +19,10 @@
   --page-padding: 30px;
   --page-width: 100%;
   --content-width: 50rem;
-  --content-width-small: 40rem;
+  --content-width-small: 33rem;
   --menu-height: 90px;
   --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
-  --grid-content: repeat(12, 1fr);
+  --grid-content: 1fr [wide-start] 1fr [content-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [content-end] 1fr [wide-end] 1fr;
 }
 
 * {
@@ -82,8 +82,11 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: 600;
+}
+
 .site-header {
-  background-color: darkcyan;
   position: fixed;
   top: 0;
   left: 0;
@@ -91,6 +94,7 @@ a {
   height: var(--menu-height);
   display: grid;
   grid-template-columns: var(--grid-container);
+  z-index: 999;
 }
 .site-header__inner {
   grid-column: inner;
@@ -163,15 +167,75 @@ a {
 
 .hero {
   background-color: #333;
+  background-image: url(assets/images/hero@2x.jpg);
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: grid;
   grid-template-columns: var(--grid-container);
+  position: relative;
+}
+.hero::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--color-dark);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-light);
+  right: 0;
+  width: 100px;
+  top: 0;
+  bottom: 0;
 }
 .hero__inner {
   grid-column: inner;
   display: grid;
   grid-template-columns: var(--grid-content);
   gap: var(--grid-gap);
+  align-items: center;
+}
+.hero__content {
+  position: relative;
+  z-index: 999;
+  grid-column: wide;
+  max-width: var(--content-width);
+  width: 100%;
+  color: var(--color-light);
+}
+.hero__title {
+  font-weight: 200;
+}
+.hero__ingress {
+  max-width: var(--content-width-small);
+}
+
+.slider__pagination {
+  position: absolute;
+  background-color: var(--color-dark);
+  left: 0;
+  bottom: 0;
+  max-width: 530px;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+.slider__description {
+  position: absolute;
+  background-color: var(--color-light);
+  right: 0;
+  bottom: 0;
+  max-width: 580px;
+  width: 100%;
+  min-height: 250px;
+  z-index: 1001;
 }
 
 /*# sourceMappingURL=style.css.map */

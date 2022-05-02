@@ -1,5 +1,4 @@
 .site-header {
-    background-color: darkcyan; // TEMP
     // Headern placeras ovanpå hero sektionen, med position, top, left och width
     position: fixed;
     top: 0;
@@ -8,6 +7,7 @@
     height: var(--menu-height);
     display: grid;
     grid-template-columns: var(--grid-container);
+    z-index: 999;
 
     &__inner {
         grid-column: inner;
