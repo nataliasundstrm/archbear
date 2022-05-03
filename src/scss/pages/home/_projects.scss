@@ -26,7 +26,14 @@
         max-width: 428px;
 
     }
-
+    
+    &__content {
+        p {
+            line-height: 2;
+            max-width: 350px;
+        }
+    }
+    
     &__explore {
         @include button.standard; 
         margin-top: 2rem;
@@ -53,13 +60,8 @@
 
 
     }
+    
 
-    &__content {
-        p {
-            line-height: 2;
-            max-width: 350px;
-        }
-    }
 }
 
 .projects {

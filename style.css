@@ -335,6 +335,10 @@ strong {
   font-weight: 200;
   max-width: 428px;
 }
+.featured__content p {
+  line-height: 2;
+  max-width: 350px;
+}
 .featured__explore {
   background-color: var(--color-dark);
   color: var(--color-light);
@@ -370,10 +374,6 @@ strong {
   right: -100px;
   background-color: var(--color-dark);
   z-index: -1;
-}
-.featured__content p {
-  line-height: 2;
-  max-width: 350px;
 }
 
 /*# sourceMappingURL=style.css.map */
