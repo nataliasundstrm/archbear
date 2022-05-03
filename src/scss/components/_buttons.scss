@@ -1,11 +1,11 @@
 @mixin standard(
     $background: var(--color-dark), 
     $color: var(--color-light), 
-    $padding: 0.5rem 1rem, 
-    $border-radius: 25px, 
+    $padding: 1rem 2rem, 
+    $border-radius: 0px, 
     $font-size: var(--font-size-1),
-    $hover-background: var(--color-accent), 
-    $hover-color: var(--color-dark)
+    $hover-background: var(--color-dark), 
+    $hover-color: var(--color-light),
     ){
         
     background-color: $background;
@@ -16,6 +16,7 @@
     border-radius: $border-radius;  
     font-size: $font-size;
     font-family: var(--font-sans);
+    font-weight: 600;
     border: 0;
     cursor: pointer;
 
