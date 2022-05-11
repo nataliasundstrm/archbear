@@ -1,0 +1,66 @@
+@use '../../components/buttons' as button; 
+
+.about {
+
+    &__content {
+        grid-column: 1/-1;
+
+    }
+}
+
+.workflow {
+    display: grid;
+    grid-template-columns: var(--grid-content);
+    gap: var(--grid-gap);
+    
+    &__title {
+        margin: 0rem;
+        font-size: var(--font-size-6);
+        font-weight: 200;
+        max-width: 428px;
+
+    }
+
+    &__explore {
+        @include button.standard; 
+        margin-top: 1rem;
+    }
+
+
+    &__img {
+       grid-column: 1/6;
+       margin: 0 0 0 -220px;
+       position: relative;
+        
+        img {
+            display: block;
+            position: relative;
+        }
+
+        &::after {
+            content: '';
+            width: 200px;
+            position: absolute;
+            top: 80px;
+            bottom: 80px;
+            right: -100px;
+            background-color: var(--color-dark);
+            z-index: -1;
+        }
+    }
+
+    &__text {
+        grid-column: 8/12;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    &__content {
+        p {
+            line-height: 2;
+            max-width: 350px;
+        }
+    }
+}

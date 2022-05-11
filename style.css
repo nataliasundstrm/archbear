@@ -87,6 +87,10 @@ strong {
   font-weight: 600;
 }
 
+.container {
+  display: grid;
+}
+
 .section {
   margin: var(--section-gap) 0;
   display: grid;
@@ -379,7 +383,7 @@ strong {
 .projects {
   grid-column: 3/-1;
   margin-top: var(--section-gap);
-  margin-right: calc(var(--page-paddning) * -1);
+  margin-right: calc(var(--page-padding) * -1);
   display: flex;
   gap: var(--grid-gap);
   overflow-x: scroll;
@@ -419,6 +423,69 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about__content {
+  grid-column: 1/-1;
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: var(--grid-content);
+  gap: var(--grid-gap);
+}
+.workflow__title {
+  margin: 0rem;
+  font-size: var(--font-size-6);
+  font-weight: 200;
+  max-width: 428px;
+}
+.workflow__explore {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0px;
+  font-size: var(--font-size-1);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.workflow__explore:hover {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+.workflow__img {
+  grid-column: 1/6;
+  margin: 0 0 0 -220px;
+  position: relative;
+}
+.workflow__img img {
+  display: block;
+  position: relative;
+}
+.workflow__img::after {
+  content: "";
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  bottom: 80px;
+  right: -100px;
+  background-color: var(--color-dark);
+  z-index: -1;
+}
+.workflow__text {
+  grid-column: 8/12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.workflow__content p {
+  line-height: 2;
+  max-width: 350px;
 }
 
 /*# sourceMappingURL=style.css.map */

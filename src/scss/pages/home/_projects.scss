@@ -43,6 +43,7 @@
     &__img {
         margin: 0;
         position: relative;
+        
         img {
             display: block;
             position: relative;
@@ -69,7 +70,7 @@
 
     margin-top: var(--section-gap);
     // Detta för att innehållet ska gå ut till kanten
-    margin-right: calc( var(--page-paddning) * -1) ;
+    margin-right: calc( var(--page-padding) * -1) ;
     display: flex;
     gap: var(--grid-gap);
 

@@ -1,5 +1,9 @@
 @use '../components/title';
 
+.container {
+    display: grid;
+}
+
 .section {
     margin: var(--section-gap) 0;
     display: grid;
