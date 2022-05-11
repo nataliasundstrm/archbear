@@ -376,4 +376,49 @@ strong {
   z-index: -1;
 }
 
+.projects {
+  grid-column: 3/-1;
+  margin-top: var(--section-gap);
+  margin-right: calc(var(--page-paddning) * -1);
+  display: flex;
+  gap: var(--grid-gap);
+  overflow-x: scroll;
+}
+
+.project {
+  flex: 0 0 310px;
+}
+.project__header {
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 6/4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.project__title {
+  font-size: var(--font-size-2);
+  font-weight: 600;
+}
+.project__title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-dark);
+  display: block;
+  margin: 1rem 0;
+}
+.project__name {
+  font-weight: 200;
+}
+.project__readmore {
+  background-color: var(--color-light);
+  display: block;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */
