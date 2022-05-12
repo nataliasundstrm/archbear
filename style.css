@@ -3,6 +3,7 @@
   --font-serif: serif;
   --font-base: 1rem;
   --font-scale: 1.25;
+  --font-size-xs: calc( var(--font-size-small) / var(--font-scale));
   --font-size-small: calc( var(--font-size-1) / var(--font-scale));
   --font-size-1: var(--font-base);
   --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
@@ -13,6 +14,7 @@
   --color-light: #fff;
   --color-medium: #707070;
   --color-dark: #313131;
+  --color-light-medium: #aaa;
   --section-gap: 6rem;
   --section-gap-inner: calc( var(--section-gap) * 0.75 );
   --section-gap-inner-small: calc( var(--section-gap) * 0.5);
@@ -165,6 +167,129 @@ strong {
 }
 .languages__link {
   color: var(--color-light);
+}
+
+.site-footer {
+  padding-top: var(--section-gap);
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+.site-footer__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: var(--grid-content);
+  gap: var(--section-gap) var(--grid-gap);
+}
+.site-footer__content {
+  grid-column: 2/6;
+}
+.site-footer .newsletter {
+  grid-column: 9/12;
+  align-self: end;
+}
+.site-footer .newsletter__title {
+  font-size: var(--font-size-3);
+  margin: 0 0 1rem 0;
+}
+.site-footer .newsletter__form {
+  position: relative;
+}
+.site-footer .newsletter__input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background: none;
+  border-bottom: 3px solid var(--color-light-medium);
+  color: var(--color-light);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-1);
+}
+.site-footer .newsletter__input:focus {
+  outline: 0;
+  border-color: var(--color-light);
+}
+.site-footer .newsletter__submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  border: 0;
+  padding: 0;
+  height: 50px;
+}
+.site-footer .newsletter__description {
+  font-size: var(--font-size-xs);
+  font-weight: 200;
+  color: var(--color-light-medium);
+}
+.site-footer__copyright {
+  padding: 2rem 0;
+  grid-column: wide;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+.site-footer__copyright::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background-color: var(--color-light-medium);
+}
+.site-footer .copyright {
+  text-align: center;
+  color: var(--color-light-medium);
+  font-size: var(--font-size-small);
+}
+.site-footer .social {
+  display: flex;
+  justify-content: flex-end;
+}
+.site-footer .social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.site-footer .social__link {
+  color: var(--color-light);
+  font-size: var(--font-size-small);
+}
+
+.hire__title {
+  margin: 0rem;
+  font-size: var(--font-size-6);
+  font-weight: 200;
+  max-width: 428px;
+}
+.hire__content p {
+  line-height: 2;
+  max-width: 350px;
+}
+.hire__explore {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0px;
+  font-size: var(--font-size-1);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.hire__explore:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .menu-button {
@@ -320,30 +445,30 @@ strong {
   line-height: 2;
 }
 
-.featured {
+.upcoming-projects .featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--grid-gap);
 }
-.featured__header {
+.upcoming-projects .featured__header {
   margin-top: 2rem;
 }
-.featured__name {
+.upcoming-projects .featured__name {
   margin: 0;
   font-weight: 300;
   font-size: var(--font-size-1);
 }
-.featured__title {
+.upcoming-projects .featured__title {
   margin: 5rem 0 1.5rem 0;
   font-size: var(--font-size-6);
   font-weight: 200;
   max-width: 428px;
 }
-.featured__content p {
+.upcoming-projects .featured__content p {
   line-height: 2;
   max-width: 350px;
 }
-.featured__explore {
+.upcoming-projects .featured__explore {
   background-color: var(--color-dark);
   color: var(--color-light);
   display: inline-block;
@@ -357,19 +482,19 @@ strong {
   cursor: pointer;
   margin-top: 2rem;
 }
-.featured__explore:hover {
+.upcoming-projects .featured__explore:hover {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
-.featured__img {
+.upcoming-projects .featured__img {
   margin: 0;
   position: relative;
 }
-.featured__img img {
+.upcoming-projects .featured__img img {
   display: block;
   position: relative;
 }
-.featured__img::after {
+.upcoming-projects .featured__img::after {
   content: "";
   width: 200px;
   position: absolute;

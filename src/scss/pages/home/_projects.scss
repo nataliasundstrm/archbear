@@ -2,68 +2,69 @@
 @use '../../components/title';
 
 .upcoming-projects{
-
-}
-
-.featured {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--grid-gap);
-
-    &__header {
-        margin-top: 2rem;
-    }
-
-    &__name {
-        margin: 0;
-        font-weight: 300;
-        font-size: var(--font-size-1);
-    }
     
-    &__title {
-        margin: 5rem 0 1.5rem 0;
-        font-size: var(--font-size-6);
-        font-weight: 200;
-        max-width: 428px;
-
-    }
+    .featured {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--grid-gap);
     
-    &__content {
-        p {
-            line-height: 2;
-            max-width: 350px;
+        &__header {
+            margin-top: 2rem;
         }
-    }
-
-    &__explore {
-        @include button.standard; 
-        margin-top: 2rem;
-    }
-
-    &__img {
-        margin: 0;
-        position: relative;
+    
+        &__name {
+            margin: 0;
+            font-weight: 300;
+            font-size: var(--font-size-1);
+        }
         
-        img {
-            display: block;
-            position: relative;
-        }
-
-        &::after {
-            content: '';
-            width: 200px;
-            position: absolute;
-            top: 80px;
-            bottom: 140px;
-            right: -100px;
-            background-color: var(--color-dark);
-            z-index: -1;
-        }
-
-
-    }
+        &__title {
+            margin: 5rem 0 1.5rem 0;
+            font-size: var(--font-size-6);
+            font-weight: 200;
+            max-width: 428px;
     
+        }
+        
+        &__content {
+            p {
+                line-height: 2;
+                max-width: 350px;
+            }
+        }
+    
+        &__explore {
+            @include button.standard; 
+            margin-top: 2rem;
+        }
+    
+        &__img {
+            margin: 0;
+            position: relative;
+    
+            img {
+                display: block;
+                position: relative;
+            }
+    
+            &::after {
+                content: '';
+                width: 200px;
+                position: absolute;
+                top: 80px;
+                bottom: 140px;
+                right: -100px;
+                background-color: var(--color-dark);
+                z-index: -1;
+            }
+    
+    
+        }
+        
+    }
+
 }
+
 
 .projects {
     grid-column: 3/-1;

@@ -8,6 +8,7 @@
     --font-base: 1rem; 
     --font-scale: 1.25;
 
+    --font-size-xs: calc( var(--font-size-small) / var(--font-scale));
     --font-size-small: calc( var(--font-size-1) / var(--font-scale));
     --font-size-1: var(--font-base);
     --font-size-2: calc( var(--font-size-1) * var(--font-scale) ); 
@@ -21,6 +22,7 @@
     --color-light: #fff;
     --color-medium: #707070;
     --color-dark: #313131; 
+    --color-light-medium: #aaa;
 
     // Section gaps
     --section-gap: 6rem;

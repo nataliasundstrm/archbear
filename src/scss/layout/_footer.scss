@@ -1,0 +1,147 @@
+@use '../components/buttons' as button;
+
+.site-footer {
+    padding-top: var(--section-gap);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: var(--grid-content);
+
+        // Skapar ett avstånd under knappen
+        gap: var(--section-gap) var(--grid-gap);
+    }
+
+    &__content {
+        grid-column: 2/6;
+    }
+
+    .newsletter {
+        grid-column: 9/12;
+        align-self: end;
+
+        
+        &__title {
+            font-size: var(--font-size-3);
+            margin: 0 0 1rem 0;
+        }
+        
+        &__form {
+            position: relative;
+            
+        }
+        
+        &__input {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background: none;
+            border-bottom: 3px solid var(--color-light-medium);
+            color: var(--color-light);
+            font-family: var(--font-sans);
+            font-size: var(--font-size-1);
+
+            &:focus {
+                outline: 0;
+                border-color: var(--color-light);
+            }
+            
+        }
+
+        &__submit {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: none;
+            border: 0;
+            padding: 0;
+            height: 50px;
+        }
+
+        &__description {
+            font-size: var(--font-size-xs);
+            font-weight: 200;
+            color: var(--color-light-medium);
+        }
+    }
+    
+    &__copyright {
+        padding: 2rem 0;
+        grid-column: wide;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+
+            // Gör att sträcket, går ända ut till kanterna i footern
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            background-color: var(--color-light-medium);
+        }
+    }
+    
+    .copyright {
+        text-align: center;
+        color: var(--color-light-medium);
+        font-size: var(--font-size-small);
+    }
+    
+    .social {
+        display: flex;
+        justify-content: flex-end;
+
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 2rem;    
+        }
+
+        &__link {
+            color: var(--color-light);
+            font-size: var(--font-size-small);
+        }
+        
+    }
+}
+
+.hire {
+    &__title {
+        margin: 0rem;
+        font-size: var(--font-size-6);
+        font-weight: 200;
+        max-width: 428px;
+
+    }
+
+    &__content {
+        p {
+            line-height: 2;
+            max-width: 350px;
+        }
+    }
+
+    &__explore {
+        @include button.standard( 
+            $background: var(--color-light), 
+            $color: var(--color-dark), 
+            $hover-background: var(--color-light), 
+            $hover-color: var(--color-dark)
+            ); 
+
+        margin-top: 1rem;
+    }
+
+}
