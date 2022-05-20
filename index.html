@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/slider.js" defer></script>
 
 </head>
 <body>
@@ -48,12 +52,55 @@
         </header>
 
         <!-- Hero -->
-        <section class="hero slider">
-            <div class="hero__inner slider__wrapper">
+        <section class="hero slider swiper">
+            <div class="hero__inner slider__wrapper swiper-wrapper">
 
-                <div class="hero__content">
-                    <h2 class="hero__title">Modern <br><strong>Architecture</strong></h2>
-                    <p class="hero__ingress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quas quidem perferendis similique beatae ab, dolores totam ipsum veritatis dignissimos?</p>
+                <!-- Slide 1 -->
+                <div class="hero__content swiper-slide" style="background-image: url(assets/images/hero@2x.jpg);">
+                    <div class="anchor-name"><strong>City Hall</strong> - München</div>
+                    <div class="hero__text">
+                        <h2 class="hero__title">Modern <br><strong>Architecture</strong></h2>
+                        <p class="hero__ingress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quas quidem perferendis similique beatae ab, dolores totam ipsum veritatis dignissimos?</p>
+                    </div>
+
+                    <div class="slider__description">
+                        <div>
+                            <h3 class="slider__title">New bold design for the modern City hall in München, GER.</h3>
+                            <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium perspiciatis qui voluptatem similique.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero__content swiper-slide" style="background-image: url(assets/images/hero-3.jpg);">
+                    <div class="anchor-name"><strong>Beach Villas</strong> - Florida</div>
+                    <div class="hero__text">
+                        <h2 class="hero__title">Beach Villas<br><strong>in Sunny Florida</strong></h2>
+                        <p class="hero__ingress">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa nihil tempore iste a maxime aliquam consectetur nemo natus numquam. Pariatur? </p>
+                    </div>
+
+                    <div class="slider__description">
+                        <div>
+                            <h3 class="slider__title">Finally, Florida gets their new Beach Villas.</h3>
+                            <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptas soluta rerum minus iure facere!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero__content swiper-slide" style="background-image: url(assets/images/hero-2@2x.jpg);">
+                    <div class="anchor-name"><strong>Microsoft HQ</strong> - Washigton DC</div>
+                    <div class="hero__text">
+                        <h2 class="hero__title">Modern <br><strong>Architecture</strong></h2>
+                        <p class="hero__ingress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quas quidem perferendis similique beatae ab, dolores totam ipsum veritatis dignissimos?</p>
+                    </div>
+
+                    <div class="slider__description">
+                        <div>
+                            <h3 class="slider__title">New bold design for the modern City hall in München, GER.</h3>
+                            <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium perspiciatis qui voluptatem similique.</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -61,18 +108,12 @@
             <div class="slider__pagination">
                 <a href="" class="slider__arrow slider__arrow--left"><img src="assets/icons/icon-chevron_left.svg" alt=""></a>
                 <div class="slider__meta">
-                    <div class="slider__counter"><strong>01</strong>05</div>
+                    <div class="slider__counter"><strong class="slider__current">01</strong><span class="slider__total">05</span></div>
                     <div class="slider__anchor"><strong>City Hall</strong> - München</div>
                 </div>
                 <a href="" class="slider__arrow slider__arrow--right"><img src="assets/icons/icon-chevron_right.svg" alt=""></a>
             </div>
 
-            <div class="slider__description">
-                <div>
-                    <h3 class="slider__title">New bold design for the modern City hall in München, GER.</h3>
-                    <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium perspiciatis qui voluptatem similique.</p>
-                </div>
-            </div>
         </section>
 
         <!-- Upcoming Projects -->

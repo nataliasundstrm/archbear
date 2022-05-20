@@ -1,27 +1,17 @@
 @use '../components/_title';
 
 .hero {
+    width: 100%;
     background-color: #333; // TEMP
-    background-image: url(assets/images/hero@2x.jpg);
-    background-size: cover;
-    background-position: center;
+    // background-image: url(assets/images/hero@2x.jpg);
+    // background-size: cover;
+    // background-position: center;
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: var(--grid-container);
+    // display: grid;
+    // grid-template-columns: var(--grid-container);
     position: relative;
 
-    // Overlay
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        background-color: var(--color-dark);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0.4;
-    }
+ 
 
     // Sidlist
     &::after {
@@ -34,23 +24,48 @@
         // top och bottom ger en automatisk höjd
         top: 0;
         bottom: 0;
+
+        z-index: 20000;
     }
 
     &__inner {
-        grid-column: inner;
-        display: grid;
-        grid-template-columns: var(--grid-content);
-        gap: var(--grid-gap);
-        align-items: center;
+        // grid-column: inner;
+        // display: grid;
+        // grid-template-columns: var(--grid-content);
+        // gap: var(--grid-gap);
+        // align-items: center;
     }
 
     &__content {
+        display: grid;
+        grid-template-columns: var(--grid-content);
+        background-size: cover;
+        background-position: center;
+        align-items: center;
         position: relative;
         z-index: 999;
-        grid-column: wide;
-        max-width: var(--content-width);
+        max-width: 100%;
         width: 100%;
         color: var(--color-light);
+
+        // Overlay
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: var(--color-dark);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.4;
+        }
+    }
+
+    &__text {
+        grid-column: wide;
+        position: relative;
+        z-index: 1999;
     }
 
     &__title {
@@ -69,6 +84,10 @@
     &__ingress {
         max-width: var(--content-width-small);
     }
+
+    .anchor-name {
+        visibility: hidden;
+    }
 }
 
 .slider {
@@ -80,6 +99,7 @@
         bottom: 0;
         display: flex;
         align-items: center;
+        z-index: 20000;
     }
 
     &__arrow {
@@ -124,8 +144,9 @@
         bottom: 0;
         max-width: 580px;
         width: 100%;
-       padding: 4rem 9rem 4rem 5rem;
+        padding: 4rem 9rem 4rem 5rem;
         z-index: 1001;
+        color: var(--color-dark);
 
     }
 
