@@ -8,6 +8,28 @@
     display: grid;
     grid-template-columns: var(--grid-container);
     z-index: 999;
+    transition: all 0.2s;
+
+    &--scrolled {
+        background-color: var(--color-light);
+
+        .branding {
+            fill: var(--color-dark);
+        }
+
+        .languages {
+
+            &__item {
+                &::after {
+                    color: var(--color-dark);
+                }
+            }
+
+            &__link {
+                color: var(--color-dark)
+            }
+        }
+    }
 
     &__inner {
         grid-column: inner;

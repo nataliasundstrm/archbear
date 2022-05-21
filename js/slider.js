@@ -51,4 +51,15 @@ const swiper = new Swiper('.swiper', {
   }
 
   slideCounter()
+
+
+  const projectSlider = new Swiper('.projects', {
+    slidesPreView: 3, // ger oss slideffekten, hur många project den "bläddrar" i taget
+    spaceBetween: 48,
+    grabCursor: true,
+    freeMode: {
+      enabled: true,
+    }
+
+  })
   

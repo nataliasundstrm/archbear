@@ -130,6 +130,19 @@ strong {
   display: grid;
   grid-template-columns: var(--grid-container);
   z-index: 999;
+  transition: all 0.2s;
+}
+.site-header--scrolled {
+  background-color: var(--color-light);
+}
+.site-header--scrolled .branding {
+  fill: var(--color-dark);
+}
+.site-header--scrolled .languages__item::after {
+  color: var(--color-dark);
+}
+.site-header--scrolled .languages__link {
+  color: var(--color-dark);
 }
 .site-header__inner {
   grid-column: inner;
@@ -515,7 +528,7 @@ strong {
   margin-right: calc(var(--page-padding) * -1);
   display: flex;
   gap: var(--grid-gap);
-  overflow-x: scroll;
+  overflow: hidden;
 }
 
 .project {
