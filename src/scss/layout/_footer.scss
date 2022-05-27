@@ -98,9 +98,9 @@
     }
     
     .social {
-        display: flex;
-        justify-content: flex-end;
-
+       display: flex;
+       justify-content: flex-end;
+        
         &__list {
             margin: 0;
             padding: 0;
@@ -109,11 +109,10 @@
             gap: 2rem;    
         }
 
-        &__link {
+        &__link, a {
             color: var(--color-light);
             font-size: var(--font-size-small);
-        }
-        
+        } 
     }
 }
 
