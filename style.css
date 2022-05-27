@@ -354,7 +354,6 @@ strong {
   background-color: var(--color-light);
   display: grid;
   grid-template-columns: var(--grid-container);
-  margin-top: 90px;
 }
 .site-menu__inner {
   grid-column: inner;
@@ -364,12 +363,11 @@ strong {
 }
 .site-menu__img {
   grid-column: 1/6;
-  margin: 0;
   position: relative;
   transform: translateX(calc(-100% - 130px));
   opacity: 0;
-  max-width: 500px;
-  max-height: 680px;
+  max-width: 400px;
+  max-height: 600px;
   display: flex;
   align-items: center;
 }
