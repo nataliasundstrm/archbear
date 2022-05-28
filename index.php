@@ -169,7 +169,7 @@
 
                 <!-- Slide 3 -->
                 <div class="hero__content swiper-slide" style="background-image: url(<?php echo get_template_directory_uri()?>/assets/images/hero-2@2x.jpg);">
-                    <div class="anchor-name"><strong>Microsoft HQ</strong> - Washigton DC</div>
+                    <div class="anchor-name"><strong>Microsoft</strong> - Washington </div>
                     <div class="hero__text">
                         <h2 class="hero__title">Modern <br><strong>Architecture</strong></h2>
                         <p class="hero__ingress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quas quidem perferendis similique beatae ab, dolores totam ipsum veritatis dignissimos?</p>
