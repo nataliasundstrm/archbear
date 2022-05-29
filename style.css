@@ -639,6 +639,7 @@ strong {
 .upcoming-projects .featured__img img {
   display: block;
   position: relative;
+  max-height: 650px;
 }
 .upcoming-projects .featured__img::after {
   content: "";

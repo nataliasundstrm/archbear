@@ -37,7 +37,7 @@ const swiper = new Swiper('.swiper', {
 
   const slideCounter = () => {
       const totalSlidesEl = document.querySelector('.slider__total')
-      const slides = document.querySelectorAll('.swiper-slide')
+      const slides = document.querySelectorAll('.hero .swiper-slide')
 
     //  Det totala antalet slides (3) 
       let totalSlides = slides.length - 2
